@@ -45,7 +45,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
               padding: EdgeInsets.only(left: 16),
               alignment: Alignment.topLeft,
               child: Text(
-                "Category List",
+                "Category",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
               ),
             ),
@@ -348,9 +348,6 @@ class _ProductListScreenState extends State<ProductListScreen> {
                         itemCount: products.length,
                         itemBuilder: (context, index) {
                           final product = products[index];
-                          var rate = product['rating'].toString().split('.');
-                          var rates = rate[0] + rate[1].characters.first;
-                          print(rates.toString());
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
@@ -376,6 +373,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                         Text(product['title'],
                                             maxLines: 1,
                                             overflow: TextOverflow.ellipsis),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
                                         Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,

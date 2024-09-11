@@ -70,7 +70,7 @@ class ProductDetailScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Text('Rating: ${product['rating']}'),
+                  // Text('Rating: ${product['rating']}'),
                   SizedBox(height: 20),
                   Text(product['description']),
                   SizedBox(height: 20),
